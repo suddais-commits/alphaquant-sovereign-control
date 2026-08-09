@@ -11447,3 +11447,22 @@ Request → POST https://api-demo.bybit.com/v5/order/cancel: {"category": "linea
 2026-08-09 20:20:05,434 | ERROR | FILUSDT: manage_open_trades error: order not exists or too late to cancel (ErrCode: 110001) (ErrTime: 15:20:05).
 Request → POST https://api-demo.bybit.com/v5/order/cancel: {"category": "linear", "symbol": "FILUSDT", "orderId": "f92fd824-d06c-4608-97fd-7fce4db037ce"}.
 2026-08-09 20:20:07,027 | INFO | UNIUSDT: trade poori tarah close ho chuki hai (sab TP/SL hit).
+2026-08-09 20:35:12,421 | INFO | AVAXUSDT: no sweep/structure signal.
+2026-08-09 20:35:14,227 | INFO | SOLUSDT: no sweep/structure signal.
+2026-08-09 20:35:15,198 | INFO | XRPUSDT: no sweep/structure signal.
+2026-08-09 20:35:15,645 | INFO | ADAUSDT: no sweep/structure signal.
+2026-08-09 20:35:16,321 | INFO | DOGEUSDT: no sweep/structure signal.
+2026-08-09 20:35:16,748 | INFO | LINKUSDT: no sweep/structure signal.
+2026-08-09 20:35:17,573 | INFO | DOTUSDT: no sweep/structure signal.
+2026-08-09 20:35:18,004 | INFO | LTCUSDT: no sweep/structure signal.
+2026-08-09 20:35:19,139 | INFO | TRXUSDT: no sweep/structure signal.
+2026-08-09 20:35:19,583 | INFO | UNIUSDT: no sweep/structure signal.
+2026-08-09 20:35:20,190 | INFO | APTUSDT: no sweep/structure signal.
+2026-08-09 20:35:20,775 | INFO | NEARUSDT: no sweep/structure signal.
+2026-08-09 20:35:21,684 | INFO | SUIUSDT: no sweep/structure signal.
+2026-08-09 20:35:22,692 | INFO | INJUSDT: no sweep/structure signal.
+2026-08-09 20:35:23,505 | INFO | AAVEUSDT: no sweep/structure signal.
+2026-08-09 20:35:24,481 | INFO | ALGOUSDT: no sweep/structure signal.
+2026-08-09 20:35:25,343 | INFO | FILUSDT: no sweep/structure signal.
+2026-08-09 20:35:27,899 | ERROR | FILUSDT: manage_open_trades error: order not exists or too late to cancel (ErrCode: 110001) (ErrTime: 15:35:27).
+Request → POST https://api-demo.bybit.com/v5/order/cancel: {"category": "linear", "symbol": "FILUSDT", "orderId": "f92fd824-d06c-4608-97fd-7fce4db037ce"}.
