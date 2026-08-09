@@ -1,0 +1,7 @@
+python-binance
+python-telegram-bot
+python-dotenv
+pandas
+requests
+feedparser
+pybit

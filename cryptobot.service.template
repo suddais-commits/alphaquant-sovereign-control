@@ -1,0 +1,21 @@
+# Systemd service template for CryptoBot (Ubuntu)
+# Save as /etc/systemd/system/cryptobot.service and edit paths/user as needed
+
+[Unit]
+Description=CryptoBot service
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/CryptoBot
+EnvironmentFile=/home/ubuntu/CryptoBot/.env
+ExecStart=/home/ubuntu/CryptoBot/venv/bin/python /home/ubuntu/CryptoBot/master_bot.py
+Restart=always
+RestartSec=5
+# Optional: redirect logs to syslog; bot also writes bot_log.txt in repo
+StandardOutput=syslog
+StandardError=syslog
+
+[Install]
+WantedBy=multi-user.target
