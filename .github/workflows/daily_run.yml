@@ -2,8 +2,8 @@ name: AlphaQuant Daily Sovereign Paper Runner
 
 on:
   schedule:
-    # 00:05 UTC every day (5 minutes after daily candle close)
-    - cron: '5 0 * * *'
+    # Runs every 4 hours (00:05, 04:05, 08:05, 12:05, 16:05, 20:05 UTC)
+    - cron: '5 */4 * * *'
   workflow_dispatch: # Allows manual trigger from GitHub Actions web interface
 
 permissions:

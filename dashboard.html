@@ -30,12 +30,109 @@
                     <span>📊 FUND METRICS</span>
                     <span id="sync-indicator" class="live-dot text-emerald-400 text-[10px]">● SYNCED</span>
                 </div>
-                <div>Paper Equity: <span id="paper-equity" class="font-bold text-emerald-400">$964.27 USDT</span></div>
-                <div>Drawdown: <span id="paper-drawdown" class="text-rose-400 font-bold">-3.6%</span></div>
+                <div>Paper Equity: <span id="paper-equity" class="font-bold text-emerald-400">$959.40 USDT</span></div>
+                <div>Drawdown: <span id="paper-drawdown" class="text-rose-400 font-bold">-4.1%</span></div>
                 <div>Risk Cap: <span class="text-emerald-400 font-bold">0.5% (Safe Guard)</span></div>
                 <div class="text-[10px] text-slate-400 pt-1">Bus Sync: <span id="bus-time" class="text-slate-200">Live</span></div>
             </div>
         </header>
+
+        <!-- 🔴 LIVE MARKET RADAR & WEBSOCKET TICKER (1-SECOND REALTIME TICK) -->
+        <section class="cartoon-card bg-slate-900 border-4 border-black p-5 rounded-3xl space-y-4">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-slate-800 pb-3 gap-2">
+                <div class="flex items-center gap-3">
+                    <span class="flex h-3 w-3 relative">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                    </span>
+                    <h2 class="text-lg font-extrabold tracking-wide uppercase text-amber-400 flex items-center gap-2">
+                        <span>⚡ LIVE CRYPTO RADAR</span>
+                        <span class="text-xs bg-slate-800 text-slate-300 font-mono px-2 py-0.5 rounded border border-slate-700">BINANCE 1s WEBSOCKET</span>
+                    </h2>
+                </div>
+                <div class="text-xs font-mono text-slate-400 flex items-center gap-3">
+                    <span>Active Stream: <b id="ws-status" class="text-emerald-400 font-bold">CONNECTING...</b></span>
+                    <span class="text-slate-600">|</span>
+                    <span>Last Tick: <b id="live-clock" class="text-slate-200">--:--:--</b></span>
+                </div>
+            </div>
+
+            <!-- Coin Cards Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 font-mono" id="ticker-grid">
+                <!-- BTC -->
+                <div id="card-BTCUSDT" class="bg-slate-950 p-3 rounded-2xl border-2 border-slate-800 transition-colors duration-150">
+                    <div class="flex justify-between items-center text-xs mb-1">
+                        <span class="font-bold text-amber-400">BTC</span>
+                        <span id="chg-BTCUSDT" class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-slate-800 text-slate-300">0.00%</span>
+                    </div>
+                    <div id="px-BTCUSDT" class="text-base font-extrabold text-slate-100">$---.--</div>
+                    <div class="text-[9px] text-slate-500 mt-1 flex justify-between">
+                        <span>H: <span id="hi-BTCUSDT">--</span></span>
+                        <span>L: <span id="lo-BTCUSDT">--</span></span>
+                    </div>
+                </div>
+                <!-- ETH -->
+                <div id="card-ETHUSDT" class="bg-slate-950 p-3 rounded-2xl border-2 border-slate-800 transition-colors duration-150">
+                    <div class="flex justify-between items-center text-xs mb-1">
+                        <span class="font-bold text-sky-400">ETH</span>
+                        <span id="chg-ETHUSDT" class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-slate-800 text-slate-300">0.00%</span>
+                    </div>
+                    <div id="px-ETHUSDT" class="text-base font-extrabold text-slate-100">$---.--</div>
+                    <div class="text-[9px] text-slate-500 mt-1 flex justify-between">
+                        <span>H: <span id="hi-ETHUSDT">--</span></span>
+                        <span>L: <span id="lo-ETHUSDT">--</span></span>
+                    </div>
+                </div>
+                <!-- SOL -->
+                <div id="card-SOLUSDT" class="bg-slate-950 p-3 rounded-2xl border-2 border-slate-800 transition-colors duration-150">
+                    <div class="flex justify-between items-center text-xs mb-1">
+                        <span class="font-bold text-purple-400">SOL</span>
+                        <span id="chg-SOLUSDT" class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-slate-800 text-slate-300">0.00%</span>
+                    </div>
+                    <div id="px-SOLUSDT" class="text-base font-extrabold text-slate-100">$---.--</div>
+                    <div class="text-[9px] text-slate-500 mt-1 flex justify-between">
+                        <span>H: <span id="hi-SOLUSDT">--</span></span>
+                        <span>L: <span id="lo-SOLUSDT">--</span></span>
+                    </div>
+                </div>
+                <!-- BNB -->
+                <div id="card-BNBUSDT" class="bg-slate-950 p-3 rounded-2xl border-2 border-slate-800 transition-colors duration-150">
+                    <div class="flex justify-between items-center text-xs mb-1">
+                        <span class="font-bold text-yellow-500">BNB</span>
+                        <span id="chg-BNBUSDT" class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-slate-800 text-slate-300">0.00%</span>
+                    </div>
+                    <div id="px-BNBUSDT" class="text-base font-extrabold text-slate-100">$---.--</div>
+                    <div class="text-[9px] text-slate-500 mt-1 flex justify-between">
+                        <span>H: <span id="hi-BNBUSDT">--</span></span>
+                        <span>L: <span id="lo-BNBUSDT">--</span></span>
+                    </div>
+                </div>
+                <!-- OP -->
+                <div id="card-OPUSDT" class="bg-slate-950 p-3 rounded-2xl border-2 border-slate-800 transition-colors duration-150">
+                    <div class="flex justify-between items-center text-xs mb-1">
+                        <span class="font-bold text-rose-400">OP</span>
+                        <span id="chg-OPUSDT" class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-slate-800 text-slate-300">0.00%</span>
+                    </div>
+                    <div id="px-OPUSDT" class="text-base font-extrabold text-slate-100">$---.--</div>
+                    <div class="text-[9px] text-slate-500 mt-1 flex justify-between">
+                        <span>H: <span id="hi-OPUSDT">--</span></span>
+                        <span>L: <span id="lo-OPUSDT">--</span></span>
+                    </div>
+                </div>
+                <!-- DOGE -->
+                <div id="card-DOGEUSDT" class="bg-slate-950 p-3 rounded-2xl border-2 border-slate-800 transition-colors duration-150">
+                    <div class="flex justify-between items-center text-xs mb-1">
+                        <span class="font-bold text-amber-300">DOGE</span>
+                        <span id="chg-DOGEUSDT" class="text-[10px] font-bold px-1.5 py-0.5 rounded bg-slate-800 text-slate-300">0.00%</span>
+                    </div>
+                    <div id="px-DOGEUSDT" class="text-base font-extrabold text-slate-100">$---.--</div>
+                    <div class="text-[9px] text-slate-500 mt-1 flex justify-between">
+                        <span>H: <span id="hi-DOGEUSDT">--</span></span>
+                        <span>L: <span id="lo-DOGEUSDT">--</span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- 🏢 THE 4 DEPARTMENTAL CARTOON BLOCKS -->
         <main class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -209,8 +306,103 @@
             }
         }
 
+        // Binance 1-Second Real-Time WebSocket Radar
+        const trackedCoins = ["BTCUSDT", "ETHUSDT", "SOLUSDT", "BNBUSDT", "OPUSDT", "DOGEUSDT"];
+        const prevPrices = {};
+
+        function initBinanceWebSocket() {
+            const wsStatus = document.getElementById('ws-status');
+            const liveClock = document.getElementById('live-clock');
+            const streams = trackedCoins.map(s => s.toLowerCase() + '@miniTicker').join('/');
+            const url = `wss://stream.binance.com:9443/stream?streams=${streams}`;
+            
+            let ws = null;
+            try {
+                ws = new WebSocket(url);
+            } catch (e) {
+                if (wsStatus) {
+                    wsStatus.textContent = 'OFFLINE';
+                    wsStatus.className = 'text-rose-400 font-bold';
+                }
+                return;
+            }
+
+            ws.onopen = () => {
+                if (wsStatus) {
+                    wsStatus.textContent = 'ONLINE (1s LIVE)';
+                    wsStatus.className = 'text-emerald-400 font-bold';
+                }
+            };
+
+            ws.onmessage = (event) => {
+                try {
+                    const msg = JSON.parse(event.data);
+                    const data = msg.data;
+                    if (!data || !data.s) return;
+                    const sym = data.s;
+                    const curPrice = parseFloat(data.c);
+                    const openPrice = parseFloat(data.o);
+                    const highPrice = parseFloat(data.h);
+                    const lowPrice = parseFloat(data.l);
+                    const chgPct = openPrice > 0 ? ((curPrice - openPrice) / openPrice) * 100 : 0;
+
+                    const pxEl = document.getElementById(`px-${sym}`);
+                    const chgEl = document.getElementById(`chg-${sym}`);
+                    const hiEl = document.getElementById(`hi-${sym}`);
+                    const loEl = document.getElementById(`lo-${sym}`);
+                    const cardEl = document.getElementById(`card-${sym}`);
+
+                    if (pxEl) {
+                        const prev = prevPrices[sym] || curPrice;
+                        const formatted = curPrice >= 1 ? curPrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : curPrice.toFixed(4);
+                        pxEl.textContent = `$${formatted}`;
+
+                        if (cardEl) {
+                            if (curPrice > prev) {
+                                cardEl.style.borderColor = '#10b981';
+                                setTimeout(() => { if (cardEl) cardEl.style.borderColor = '#1e293b'; }, 300);
+                            } else if (curPrice < prev) {
+                                cardEl.style.borderColor = '#f43f5e';
+                                setTimeout(() => { if (cardEl) cardEl.style.borderColor = '#1e293b'; }, 300);
+                            }
+                        }
+                        prevPrices[sym] = curPrice;
+                    }
+
+                    if (chgEl) {
+                        const sign = chgPct >= 0 ? '+' : '';
+                        chgEl.textContent = `${sign}${chgPct.toFixed(2)}%`;
+                        if (chgPct >= 0) {
+                            chgEl.className = 'text-[10px] font-bold px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-400 border border-emerald-500/30';
+                        } else {
+                            chgEl.className = 'text-[10px] font-bold px-1.5 py-0.5 rounded bg-rose-500/20 text-rose-400 border border-rose-500/30';
+                        }
+                    }
+                    if (hiEl) hiEl.textContent = highPrice >= 1 ? highPrice.toFixed(1) : highPrice.toFixed(4);
+                    if (loEl) loEl.textContent = lowPrice >= 1 ? lowPrice.toFixed(1) : lowPrice.toFixed(4);
+                    if (liveClock) liveClock.textContent = new Date().toLocaleTimeString();
+                } catch (err) {}
+            };
+
+            ws.onerror = () => {
+                if (wsStatus) {
+                    wsStatus.textContent = 'RECONNECTING...';
+                    wsStatus.className = 'text-amber-400 font-bold';
+                }
+            };
+
+            ws.onclose = () => {
+                if (wsStatus) {
+                    wsStatus.textContent = 'RETRYING (3s)...';
+                    wsStatus.className = 'text-slate-400 font-bold';
+                }
+                setTimeout(initBinanceWebSocket, 3000);
+            };
+        }
+
         // Run immediately and poll every 10 seconds
         window.addEventListener('DOMContentLoaded', () => {
+            initBinanceWebSocket();
             updateDashboardMetrics();
             setInterval(updateDashboardMetrics, 10000);
         });
