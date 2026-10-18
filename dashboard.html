@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlphaQuant Global Sovereign Fund — Operations Room</title>
+    <!-- Direct CDN link to Tailwind CSS for zero-dependency standalone execution -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fredoka:wght@500;600;700&display=swap');
+        body { font-family: 'Space Grotesk', sans-serif; background-color: #0f172a; }
+        .cartoon-card { border: 4px solid #000000; box-shadow: 8px 8px 0px #000000; transition: transform 0.2s, box-shadow 0.2s; }
+        .cartoon-card:hover { transform: translate(-4px, -4px); box-shadow: 12px 12px 0px #000000; }
+        @keyframes pulseDot { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(1.15); } }
+        .live-dot { animation: pulseDot 2s infinite ease-in-out; }
+    </style>
+</head>
+<body class="text-slate-100 p-4 md:p-8 min-h-screen">
+    <div class="max-w-7xl mx-auto space-y-8">
+        
+        <!-- 👑 THE BOARDROOM / EXECUTIVE HQ -->
+        <header class="cartoon-card bg-amber-400 text-slate-900 p-6 rounded-3xl relative overflow-hidden flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0">
+            <div>
+                <div class="text-xs font-bold uppercase tracking-widest bg-slate-900 text-amber-400 px-3 py-1 rounded-full inline-block mb-2">Executive Desks (Root)</div>
+                <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight">CHAIRMAN AlphaQuant Sovereign Fund</h1>
+                <p class="text-sm font-semibold opacity-90 mt-1">Core Status: <span id="status-pill" class="font-bold text-slate-950">System Online & Reconnected | 100% Path-Normalized</span></p>
+            </div>
+            <div class="bg-slate-900 text-slate-100 p-4 rounded-2xl border-2 border-black font-mono text-xs space-y-1 w-full md:w-auto min-w-[240px]">
+                <div class="text-amber-400 font-bold border-b border-slate-700 pb-1 mb-1 flex justify-between items-center">
+                    <span>📊 FUND METRICS</span>
+                    <span id="sync-indicator" class="live-dot text-emerald-400 text-[10px]">● SYNCED</span>
+                </div>
+                <div>Paper Equity: <span id="paper-equity" class="font-bold text-emerald-400">$964.27 USDT</span></div>
+                <div>Drawdown: <span id="paper-drawdown" class="text-rose-400 font-bold">-3.6%</span></div>
+                <div>Risk Cap: <span class="text-emerald-400 font-bold">0.5% (Safe Guard)</span></div>
+                <div class="text-[10px] text-slate-400 pt-1">Bus Sync: <span id="bus-time" class="text-slate-200">Live</span></div>
+            </div>
+        </header>
+
+        <!-- 🏢 THE 4 DEPARTMENTAL CARTOON BLOCKS -->
+        <main class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- DEPT 1: MACRO INTELLIGENCE -->
+            <section class="cartoon-card bg-emerald-500 text-slate-900 p-6 rounded-3xl space-y-4 relative">
+                <div class="flex justify-between items-center border-b-4 border-black pb-2">
+                    <h2 class="text-xl font-bold tracking-wide flex items-center gap-2">
+                        <span>🟢</span><span>DEPT 1: MACRO INTELLIGENCE</span>
+                    </h2>
+                    <span id="dept1-status" class="bg-slate-900 text-emerald-400 font-mono text-xs px-2 py-0.5 rounded font-bold border border-black">ONLINE</span>
+                </div>
+                <div class="space-y-2 text-sm font-semibold">
+                    <div class="bg-white/40 p-2 rounded-xl border border-black">💼 <b>CEO:</b> <code>CEO_Data_Intelligence.py</code></div>
+                    <div class="bg-white/40 p-2 rounded-xl border border-black">📡 <b>GM:</b> <code>GM_Market_Stream_Feeder.py</code></div>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-xl border-2 border-black text-xs font-mono space-y-1">
+                        <div class="text-emerald-400 font-bold">🔍 Operational Specialists:</div>
+                        <div>• OM_05 Correlation Assessor (Active)</div>
+                        <div>• OM_07 ADX Volatility Quant (Active)</div>
+                        <div>• OM_15 Black Swan Gatekeeper (Active)</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DEPT 2: SMC STRATEGY -->
+            <section class="cartoon-card bg-sky-500 text-slate-900 p-6 rounded-3xl space-y-4 relative">
+                <div class="flex justify-between items-center border-b-4 border-black pb-2">
+                    <h2 class="text-xl font-bold tracking-wide flex items-center gap-2">
+                        <span>📐</span><span>DEPT 2: SMC STRATEGY DESK</span>
+                    </h2>
+                    <span id="dept2-status" class="bg-slate-900 text-sky-400 font-mono text-xs px-2 py-0.5 rounded font-bold border border-black">CASCADE</span>
+                </div>
+                <div class="space-y-2 text-sm font-semibold">
+                    <div class="bg-white/40 p-2 rounded-xl border border-black">💼 <b>CEO:</b> <code>CEO_SMC_Strategy_Cascade.py</code></div>
+                    <div class="bg-white/40 p-2 rounded-xl border border-black">📊 <b>GM:</b> <code>GM_Structure_Validation_Engine.py</code></div>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-xl border-2 border-black text-xs font-mono space-y-1">
+                        <div class="text-sky-400 font-bold">🔍 Operational Specialists:</div>
+                        <div>• OM_21 Liquidity Sweep Detector (Active)</div>
+                        <div>• OM_34 Engulfing Candle Confirm (Active)</div>
+                        <div>• OM_35 Multi-TF 50EMA Trend (Active)</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DEPT 3: WHALE & ORDER FLOW -->
+            <section class="cartoon-card bg-indigo-500 text-slate-900 p-6 rounded-3xl space-y-4 relative">
+                <div class="flex justify-between items-center border-b-4 border-black pb-2">
+                    <h2 class="text-xl font-bold tracking-wide flex items-center gap-2">
+                        <span>🐋</span><span>DEPT 3: WHALE INTELLIGENCE</span>
+                    </h2>
+                    <span id="dept3-status" class="bg-slate-900 text-indigo-400 font-mono text-xs px-2 py-0.5 rounded font-bold border border-black">ABSORPTION</span>
+                </div>
+                <div class="space-y-2 text-sm font-semibold">
+                    <div class="bg-white/40 p-2 rounded-xl border border-black">💼 <b>CEO:</b> <code>CEO_Whale_Order_Flow.py</code></div>
+                    <div class="bg-white/40 p-2 rounded-xl border border-black">📊 <b>GM:</b> <code>GM_Cumulative_Volume_Delta.py</code></div>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-xl border-2 border-black text-xs font-mono space-y-1">
+                        <div class="text-indigo-400 font-bold">🔍 Operational Specialists:</div>
+                        <div>• OM_41 Whale Binance L/S Ratio (Active)</div>
+                        <div>• OM_45 Volume Profile POC Calc (Active)</div>
+                        <div>• OM_49 Tokenomics Dilution Audit (Active)</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DEPT 4: RISK & FORTRESS CONTROL -->
+            <section class="cartoon-card bg-rose-500 text-slate-900 p-6 rounded-3xl space-y-4 relative">
+                <div class="flex justify-between items-center border-b-4 border-black pb-2">
+                    <h2 class="text-xl font-bold tracking-wide flex items-center gap-2">
+                        <span>🛡️</span><span>DEPT 4: RISK & FORTRESS CONTROL</span>
+                    </h2>
+                    <span id="dept4-status" class="bg-slate-900 text-rose-400 font-mono text-xs px-2 py-0.5 rounded font-bold border border-black">GATED</span>
+                </div>
+                <div class="space-y-2 text-sm font-semibold">
+                    <div class="bg-white/40 p-2 rounded-xl border border-black">💼 <b>CEO:</b> <code>CEO_Risk_Management_CRO.py</code></div>
+                    <div class="bg-white/40 p-2 rounded-xl border border-black">🛡️ <b>GM:</b> <code>GM_Portfolio_Exposure_Guard.py</code></div>
+                    <div class="bg-slate-900 text-slate-100 p-3 rounded-xl border-2 border-black text-xs font-mono space-y-1">
+                        <div class="text-rose-400 font-bold">🔍 Operational Specialists:</div>
+                        <div>• OM_67 Consecutive Loss Halver (Active)</div>
+                        <div>• OM_73 Live Execution Router (Gated)</div>
+                        <div>• OM_75 LADDER Trailing SL Locker (Active)</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- 🧹 STAFF DEPT / SYSTEM CACHE DOCTOR -->
+        <footer class="cartoon-card bg-violet-400 text-slate-900 p-4 rounded-2xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 font-mono text-xs font-bold">
+            <div class="flex items-center space-x-2">
+                <span class="text-base">🧹</span>
+                <span>CLEANER_System_Cache_Doctor.py:</span>
+                <span id="cleaner-badge" class="text-slate-100 bg-slate-900 px-2 py-0.5 rounded border border-black">ACTIVE FLUSH</span>
+            </div>
+            <div class="text-slate-800 text-[10px] sm:text-xs">
+                • 15-Min Evaluation Loop Enabled (900s) | Loop Status: <span id="loop-status" class="text-emerald-950 font-bold">Cold & Silent</span>
+            </div>
+        </footer>
+        
+    </div>
+
+    <!-- Real-Time Background Bus Listener -->
+    <script>
+        async function updateDashboardMetrics() {
+            let data = null;
+            
+            // 1. Try relative /api/bus (works when hosted with bot_api_server.py)
+            try {
+                const res = await fetch('/api/bus');
+                if (res.ok) {
+                    data = await res.json();
+                }
+            } catch (err) {}
+
+            // 2. Try static data/pipeline_bus.json (works on Hugging Face Static Space!)
+            if (!data) {
+                try {
+                    const res = await fetch('data/pipeline_bus.json');
+                    if (res.ok) {
+                        const rawBus = await res.json();
+                        data = {
+                            status: 'online',
+                            timestamp: rawBus.timestamp,
+                            bus: rawBus,
+                            paper_state: rawBus.paper_state || null
+                        };
+                    }
+                } catch (err) {}
+            }
+
+            // 3. Try localhost fallback (works if viewing Hugging Face Space while local bot is running)
+            if (!data) {
+                try {
+                    const res = await fetch('http://127.0.0.1:8000/api/bus');
+                    if (res.ok) {
+                        data = await res.json();
+                    }
+                } catch (err) {}
+            }
+
+            if (data) {
+                // Update timestamp
+                if (data.timestamp) {
+                    const d = new Date(data.timestamp * 1000);
+                    document.getElementById('bus-time').textContent = d.toLocaleTimeString() + " (Live)";
+                }
+
+                // Update Paper Equity & Drawdown
+                if (data.paper_state && data.paper_state.books) {
+                    const b = data.paper_state.books["D55-LADDER"] || data.paper_state.books["D55-TRAIL3"];
+                    if (b && b.equity) {
+                        document.getElementById('paper-equity').textContent = `$${b.equity.toFixed(2)} USDT`;
+                        const ddPct = ((b.equity / 1000.0) - 1.0) * 100.0;
+                        document.getElementById('paper-drawdown').textContent = `${ddPct >= 0 ? '+' : ''}${ddPct.toFixed(1)}%`;
+                    }
+                }
+
+                // Status pill
+                const statusPill = document.getElementById('status-pill');
+                if (statusPill && data.status === 'online') {
+                    statusPill.textContent = '🟢 SYSTEM ONLINE & CONNECTED';
+                    statusPill.className = 'font-bold px-3 py-1 bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 rounded-full text-xs';
+                }
+            } else {
+                // Cloud Standby Mode
+                const d = new Date();
+                document.getElementById('bus-time').textContent = d.toLocaleTimeString() + " (Cloud 24/7)";
+                const statusPill = document.getElementById('status-pill');
+                if (statusPill) {
+                    statusPill.textContent = '☁️ CLOUD COCKPIT (STATIC) | STANDBY';
+                    statusPill.className = 'font-bold px-3 py-1 bg-amber-500/20 text-amber-300 border border-amber-500/40 rounded-full text-xs';
+                }
+            }
+        }
+
+        // Run immediately and poll every 10 seconds
+        window.addEventListener('DOMContentLoaded', () => {
+            updateDashboardMetrics();
+            setInterval(updateDashboardMetrics, 10000);
+        });
+    </script>
+</body>
+</html>

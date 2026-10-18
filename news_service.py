@@ -135,8 +135,6 @@ def fetch_news_summary(
     }
 
 
-# ─── Utils ────────────────────────────────────────────────────────────────────
-
 def _clean_html(text: str) -> str:
     """Strip basic HTML tags from text."""
     import re
@@ -144,3 +142,98 @@ def _clean_html(text: str) -> str:
     for entity, char in (("&amp;", "&"), ("&lt;", "<"), ("&gt;", ">"), ("&nbsp;", " ")):
         text = text.replace(entity, char)
     return text.strip()
+
+
+# ─── Sentiment Analysis Engine ────────────────────────────────────────────────
+
+BULLISH_KEYWORDS = [
+    "surge", "surges", "rally", "rallies", "bull", "bullish", "all-time high", "ath",
+    "breakout", "etf", "approval", "accumulate", "accumulation", "soars", "gain", "gains",
+    "inflow", "inflows", "adoption", "upgrade", "rate cut", "partnership", "jump", "jumps",
+    "record high", "whale buy", "expansion"
+]
+
+BEARISH_KEYWORDS = [
+    "plunge", "plunges", "dump", "dumps", "crash", "crashes", "bear", "bearish",
+    "drop", "drops", "fall", "falls", "liquidation", "liquidated", "outflow", "outflows",
+    "lawsuit", "sue", "sued", "hack", "hacked", "exploit", "sec probe", "depeg", "fraud",
+    "insolvent", "bankruptcy", "ban", "banned", "investigation", "subpoena", "panic", "sell-off"
+]
+
+BLACK_SWAN_KEYWORDS = [
+    "hack", "exploit", "insolvent", "bankruptcy", "depeg", "sec charge", "arrested", "freeze withdrawals"
+]
+
+def analyze_news_sentiment(
+    symbol: Optional[str] = None,
+    category: str = "crypto",
+    limit: int = 15
+) -> dict:
+    """
+    Analyzes live financial & crypto RSS headlines.
+    Returns structured sentiment score (-1.0 to +1.0), breakdown, and black-swan alerts.
+    """
+    items = fetch_news(symbol=symbol, category=category, limit=limit)
+    if not items or (len(items) == 1 and "error" in items[0]):
+        return {
+            "score": 0.0,
+            "sentiment": "NEUTRAL",
+            "bullish_count": 0,
+            "bearish_count": 0,
+            "total_analyzed": 0,
+            "black_swan_alert": False,
+            "black_swan_reason": None,
+            "headlines": []
+        }
+
+    bullish_pts = 0
+    bearish_pts = 0
+    black_swan_triggered = False
+    black_swan_reason = None
+    processed_headlines = []
+
+    for item in items:
+        title = item.get("title", "")
+        summary = item.get("summary", "")
+        text = f"{title} {summary}".lower()
+        processed_headlines.append({"title": title, "source": item.get("source", "RSS")})
+
+        # Check black swan
+        for bs in BLACK_SWAN_KEYWORDS:
+            if bs in text:
+                black_swan_triggered = True
+                black_swan_reason = f"Black Swan Trigger ({bs}): {title}"
+                break
+
+        # Check bull/bear keyword occurrences
+        for kw in BULLISH_KEYWORDS:
+            if kw in text:
+                bullish_pts += 1
+        for kw in BEARISH_KEYWORDS:
+            if kw in text:
+                bearish_pts += 1
+
+    total = bullish_pts + bearish_pts
+    if total == 0:
+        score = 0.0
+        sentiment = "NEUTRAL"
+    else:
+        score = round((bullish_pts - bearish_pts) / total, 2)
+        if score >= 0.25:
+            sentiment = "BULLISH"
+        elif score <= -0.25:
+            sentiment = "BEARISH"
+        else:
+            sentiment = "NEUTRAL"
+
+    return {
+        "score": score,
+        "sentiment": sentiment,
+        "bullish_count": bullish_pts,
+        "bearish_count": bearish_pts,
+        "total_analyzed": len(items),
+        "black_swan_alert": black_swan_triggered,
+        "black_swan_reason": black_swan_reason,
+        "headlines": processed_headlines[:6]
+    }
+

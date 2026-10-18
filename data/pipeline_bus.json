@@ -1,0 +1,90 @@
+{
+ "timestamp": 1792268605.536455,
+ "market_data": {},
+ "btc_regime": {},
+ "liquidity_sweeps": {},
+ "smc_structures": {},
+ "trend_filters": {},
+ "volatility_guards": {},
+ "conviction_scores": {},
+ "position_sizes": {},
+ "execution_queue": [],
+ "active_positions": {},
+ "notification_queue": [
+  {
+   "title": "Test Title",
+   "message": "Test message",
+   "level": "INFO",
+   "time": "2026-10-14 23:11:03",
+   "timestamp": 1792001463.138981
+  }
+ ],
+ "analytics_stats": {},
+ "heartbeats": {
+  "test_agent": {
+   "timestamp": 1792001463.132739,
+   "status": "HEALTHY",
+   "readable_time": "2026-10-14 23:11:03"
+  },
+  "CHAIRMAN_AlphaQuant_Sovereign_Fund": {
+   "timestamp": 1792265076.887122,
+   "status": "IDLE_NO_MARKET_DATA",
+   "readable_time": "2026-10-18 00:24:36"
+  }
+ },
+ "paper_state": {
+  "books": {
+   "D55-LADDER": {
+    "equity": 964.2677765982091,
+    "open": [
+     {
+      "book": "D55-LADDER",
+      "sym": "OP",
+      "side": 1,
+      "entry_time": "2026-10-14 00:00:00",
+      "entry": 0.1586793,
+      "stop": 0.1315030649406558,
+      "cur": 0.1315030649406558,
+      "dist": 0.02717623505934419,
+      "risk_amt": 4.8213388829910455,
+      "state": 0,
+      "be": false,
+      "rem": 1.0,
+      "real": 0.0,
+      "best": 0.1586793,
+      "active": false,
+      "nbars": 1,
+      "last_time": "2026-10-14 00:00:00"
+     }
+    ],
+    "last_bar": "2026-10-14 00:00:00"
+   },
+   "D55-TRAIL3": {
+    "equity": 964.2677765982091,
+    "open": [
+     {
+      "book": "D55-TRAIL3",
+      "sym": "OP",
+      "side": 1,
+      "entry_time": "2026-10-14 00:00:00",
+      "entry": 0.1586793,
+      "stop": 0.1315030649406558,
+      "cur": 0.1315030649406558,
+      "dist": 0.02717623505934419,
+      "risk_amt": 4.8213388829910455,
+      "state": 0,
+      "be": false,
+      "rem": 1.0,
+      "real": 0.0,
+      "best": 0.1625,
+      "active": false,
+      "nbars": 1,
+      "last_time": "2026-10-14 00:00:00"
+     }
+    ],
+    "last_bar": "2026-10-14 00:00:00"
+   }
+  }
+ },
+ "last_sync_time": "2026-10-18 01:23:25 UTC"
+}

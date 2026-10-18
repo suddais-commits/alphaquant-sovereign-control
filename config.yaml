@@ -1,0 +1,45 @@
+system:
+  live_trading_enabled: false
+  use_v2_gate: false
+  testing_mode: false
+  score_threshold: 70.0
+  score_fallback_margin: 8.0
+
+costs:
+  fee_bps_per_side: 4.0        
+  slippage_bps: 5.0            
+  funding_rate_per_8h: 0.0001  
+
+regime:
+  adx_period: 14
+  adx_chop_threshold: 20.0     
+  adx_trend_threshold: 25.0    
+  atr_period: 14
+  atr_rank_window: 100
+  atr_chop_percentile: 0.30    
+
+setup:
+  donchian_period: 55          
+  reversal_atr_mult: 1.5
+  require_closed_candles: true
+  min_rr_ratio: 3.0
+  max_sl_pct: 0.05             
+
+risk:
+  base_risk_pct: 0.015
+  max_risk_pct: 0.02           
+  max_open_trades: 2
+  max_portfolio_risk_pct: 0.04 
+  loss_streak_stop: 3          
+
+execution:
+  mode: "tp_ladder"            
+  max_bars_in_trade: 400       
+  be_at_r: 2.0                 
+  tp_ladder:
+    tp1_r: 3.0                 
+    tp1_frac: 0.30
+    tp2_r: 5.0
+    tp2_frac: 0.30
+    tp2_trail_to_r: 2.5
+    runner_frac: 0.40

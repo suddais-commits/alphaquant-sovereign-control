@@ -1,0 +1,28 @@
+{
+    "chat.byokUtilityModelDefault": "mainAgent",
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/.venv/**": true,
+        "**/logs/**": true,
+        "**/data/**": true,
+        "**/node_modules/**": true,
+        "**/*.pdf": true,
+        "**/*.log": true,
+        "**/*.jsonl": true,
+        "**/__pycache__/**": true
+    },
+    "search.exclude": {
+        "**/.venv": true,
+        "**/logs": true,
+        "**/*.pdf": true,
+        "**/*.log": true
+    },
+    "python.analysis.diagnosticMode": "openFilesOnly",
+    "python.analysis.autoImportCompletions": false,
+    "python.analysis.ignore": [
+        "**/.venv/**",
+        "**/logs/**",
+        "**/data/**"
+    ]
+}

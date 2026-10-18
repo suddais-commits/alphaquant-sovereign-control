@@ -1,0 +1,33 @@
+# Virtual environment
+.venv/
+venv/
+
+# Secrets - NEVER push
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE
+.vscode/
+.idea/
+
+# Local tools
+tools/
+
+# OS files
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Candle cache (large, re-downloadable)
+candle_cache/
+
+# Logs (optional, large)
+*.log
+
+# Gemini agent data
+.gemini/
+.agents/

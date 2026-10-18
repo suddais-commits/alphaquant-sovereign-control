@@ -1,0 +1,32 @@
+
+=== DAILY DONCHIAN55: BASE vs 3 PRE-DECLARED FILTERS (fair control per filter) ===
+
+--- ORIGINAL 30: 4 coins ---
+BASE [LADDER]                      N=45   win=31% meanR=+0.030 PF=1.04 | random=-0.173 diff=+0.203 boot95=[-0.334,+0.940] halves=+0.16/+0.23 -> FAIL
+BASE [TRAIL3]                      N=54   win=22% meanR=-0.260 PF=0.67 | random=-0.103 diff=-0.156 boot95=[-0.564,+0.240] halves=-0.49/+0.14 -> FAIL
+LONG-ONLY [LADDER]: only 24 trades -> too few (FAIL)
+LONG-ONLY [TRAIL3]: only 33 trades -> too few (FAIL)
+BTC-ALIGNED [LADDER]: only 20 trades -> too few (FAIL)
+BTC-ALIGNED [TRAIL3]: only 29 trades -> too few (FAIL)
+VOLUME>1.5x [LADDER]: only 0 trades -> too few (FAIL)
+VOLUME>1.5x [TRAIL3]: only 0 trades -> too few (FAIL)
+
+--- UNSEEN 20: 4 coins ---
+BASE [LADDER]: only 36 trades -> too few (FAIL)
+BASE [TRAIL3]                      N=41   win=34% meanR=+0.428 PF=1.64 | random=+0.222 diff=+0.205 boot95=[-0.446,+0.902] halves=+0.00/+0.42 -> FAIL
+LONG-ONLY [LADDER]: only 19 trades -> too few (FAIL)
+LONG-ONLY [TRAIL3]: only 24 trades -> too few (FAIL)
+BTC-ALIGNED [LADDER]: only 24 trades -> too few (FAIL)
+BTC-ALIGNED [TRAIL3]: only 27 trades -> too few (FAIL)
+VOLUME>1.5x [LADDER]: only 0 trades -> too few (FAIL)
+VOLUME>1.5x [TRAIL3]: only 0 trades -> too few (FAIL)
+
+=== VERDICT (pre-declared rule: PASS in both groups AND better than BASE in both groups) ===
+LONG-ONLY      ladder  pass both groups: no  | better than BASE in both: no  -> no improvement
+LONG-ONLY      trail   pass both groups: no  | better than BASE in both: no  -> no improvement
+BTC-ALIGNED    ladder  pass both groups: no  | better than BASE in both: no  -> no improvement
+BTC-ALIGNED    trail   pass both groups: no  | better than BASE in both: no  -> no improvement
+VOLUME>1.5x    ladder  pass both groups: no  | better than BASE in both: no  -> no improvement
+VOLUME>1.5x    trail   pass both groups: no  | better than BASE in both: no  -> no improvement
+
+If nothing is an IMPROVEMENT, keep BASE. Do not try more variants after seeing this. Still only worth paper trading, not proven profit.

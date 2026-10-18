@@ -1,0 +1,38 @@
+﻿{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Install Python dependencies",
+      "type": "shell",
+      "command": "python -m pip install -r requirements.txt",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "inAgents": true,
+      "runOptions": {
+        "runOn": "worktreeCreated"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run CryptoBot (master_bot.py)",
+      "type": "shell",
+      "command": "python master_bot.py",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "inAgents": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Run backtest CLI",
+      "type": "shell",
+      "command": "python run_backtest.py",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "inAgents": true,
+      "problemMatcher": []
+    }
+  ]
+}

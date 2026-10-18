@@ -1,0 +1,14 @@
+
+=== RAW SWEEP-RECLAIM vs RANDOM (fixed 1R, no risk brakes) ===
+Signal                 N=3167   win=33.4%  meanR=-0.020 +/-0.068  PF=0.97  monthBoot95=[-0.066,+0.030]
+Random seed 42         N=3042   win=33.6%  meanR=-0.050 +/-0.067  PF=0.93
+Random seed 101        N=3082   win=33.1%  meanR=-0.077 +/-0.066  PF=0.90
+Random seed 777        N=3099   win=33.5%  meanR=-0.068 +/-0.065  PF=0.91
+Random seed 2024       N=3082   win=32.7%  meanR=-0.069 +/-0.067  PF=0.91
+Random seed 9999       N=3060   win=34.0%  meanR=-0.058 +/-0.066  PF=0.92
+Random (all seeds)     N=15365  win=33.4%  meanR=-0.065 +/-0.030  PF=0.91  monthBoot95=[-0.100,-0.025]
+
+Signal minus random mean R = +0.045   (noise level about +/-0.068)
+VERDICT: no clear edge over random
+
+Per-coin trades: DEMO0:518, DEMO1:478, DEMO2:564, DEMO3:518, DEMO4:553, DEMO5:536

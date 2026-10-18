@@ -1,0 +1,23 @@
+
+=== DAILY: LADDER exit vs YOUR TRAIL3 exit (each vs a random control with the same exit) ===
+
+--- ORIGINAL 30 coins: 4 coins loaded ---
+1D Donchian20 [LADDER]             signal N=51 win=37.3% meanR=+0.135 PF=1.22 avgWin=+2.04 avgLoss=-0.99
+                                   random meanR=+0.181 | diff=-0.046  monthBoot95(diff)=[-0.473,+0.685]  half1=+0.369 half2=-0.432 -> FAIL
+1D Donchian20 [TRAIL3]             signal N=66 win=28.8% meanR=+0.048 PF=1.07 avgWin=+2.64 avgLoss=-1.00
+                                   random meanR=-0.101 | diff=+0.149  monthBoot95(diff)=[-0.335,+0.742]  half1=+0.567 half2=-0.298 -> FAIL
+1D Donchian55 [LADDER]             signal N=45 win=31.1% meanR=+0.030 PF=1.04 avgWin=+2.34 avgLoss=-1.01
+                                   random meanR=-0.173 | diff=+0.203  monthBoot95(diff)=[-0.334,+0.940]  half1=+0.164 half2=+0.229 -> FAIL
+1D Donchian55 [TRAIL3]             signal N=54 win=22.2% meanR=-0.260 PF=0.67 avgWin=+2.38 avgLoss=-1.01
+                                   random meanR=-0.103 | diff=-0.156  monthBoot95(diff)=[-0.564,+0.240]  half1=-0.489 half2=+0.140 -> FAIL
+
+--- NEW 20 coins (unseen): 4 coins loaded ---
+1D Donchian20 [LADDER]             signal N=50 win=40.0% meanR=+0.156 PF=1.26 avgWin=+1.91 avgLoss=-1.01
+                                   random meanR=+0.055 | diff=+0.101  monthBoot95(diff)=[-0.503,+0.725]  half1=+0.297 half2=-0.242 -> FAIL
+1D Donchian20 [TRAIL3]             signal N=56 win=33.9% meanR=+0.377 PF=1.56 avgWin=+3.09 avgLoss=-1.01
+                                   random meanR=+0.489 | diff=-0.112  monthBoot95(diff)=[-0.659,+0.438]  half1=-0.201 half2=-0.018 -> FAIL
+1D Donchian55 [LADDER]: only 36 trades -> too few (FAIL)
+1D Donchian55 [TRAIL3]             signal N=41 win=34.1% meanR=+0.428 PF=1.64 avgWin=+3.21 avgLoss=-1.01
+                                   random meanR=+0.222 | diff=+0.205  monthBoot95(diff)=[-0.446,+0.902]  half1=+0.003 half2=+0.420 -> FAIL
+
+Caveat: coin lists are coins that exist TODAY (survivorship), and coins move together, so even a PASS = 'worth paper trading', not 'profitable'.

@@ -1,0 +1,59 @@
+name: AlphaQuant Daily Sovereign Paper Runner
+
+on:
+  schedule:
+    # 00:05 UTC every day (5 minutes after daily candle close)
+    - cron: '5 0 * * *'
+  workflow_dispatch: # Allows manual trigger from GitHub Actions web interface
+
+permissions:
+  contents: write
+
+jobs:
+  run-paper-and-deploy:
+    name: Execute Daily Paper Trader & Deploy to Hugging Face
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Daily Trend Paper Trader
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          EXCHANGE_EXECUTION_ENABLED: "false"
+          USE_V2: "false"
+        run: |
+          python daily_trend_paper.py --force
+
+      - name: Sync and Deploy to Hugging Face Space
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          python deploy_hf_space.py
+
+      - name: Commit and Push Updated Paper State to Repository
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add paper_state.json paper_trades.csv data/pipeline_bus.json dashboard.html || true
+          if git diff --staged --quiet; then
+            echo "No state changes to commit."
+          else
+            git commit -m "Auto: Update daily paper state and trades [skip ci]"
+            git push
+          fi
