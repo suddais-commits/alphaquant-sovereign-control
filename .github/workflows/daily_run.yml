@@ -44,7 +44,7 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          python deploy_hf_space.py
+          python deploy_hf_space.py || echo "HF deployment skipped or failed, continuing workflow."
 
       - name: Commit and Push Updated Paper State to Repository
         run: |
