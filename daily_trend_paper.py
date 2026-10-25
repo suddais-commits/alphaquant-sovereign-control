@@ -36,6 +36,9 @@ def fetch(sym):
 def new_pos(book, sym, side, entry_time, entry_open, atr_sig, close_sig, equity):
     entry = entry_open * (1 + side * E.SLIP / 1e4); stop = close_sig - side * E.ATR_MULT * atr_sig; dist = abs(entry - stop)
     if dist <= 0 or (side > 0 and stop >= entry) or (side < 0 and stop <= entry): return None
+    if dist < 1.5 * atr_sig:
+        print(f"[{book}] {sym}: signal skipped (gap guard: dist {dist:.4g} < 1.5 ATR {1.5 * atr_sig:.4g})")
+        return None
     return dict(book=book, sym=sym, side=side, entry_time=str(entry_time), entry=entry, stop=stop, cur=stop, dist=dist,
                 risk_amt=RISK * equity, state=0, be=False, rem=1.0, real=0.0, best=entry, active=False, exit_open=False, nbars=0, last_time=None)
 

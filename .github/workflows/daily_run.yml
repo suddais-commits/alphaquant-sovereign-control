@@ -2,8 +2,10 @@ name: AlphaQuant Daily Sovereign Paper Runner
 
 on:
   schedule:
-    # Runs every 4 hours (00:05, 04:05, 08:05, 12:05, 16:05, 20:05 UTC)
-    - cron: '5 */4 * * *'
+    # Main run at 00:05 UTC (05:05 PKT) right after daily close
+    - cron: '5 0 * * *'
+    # Backup run at 01:05 UTC (06:05 PKT) in case of upstream Binance/queue delay
+    - cron: '5 1 * * *'
   workflow_dispatch: # Allows manual trigger from GitHub Actions web interface
 
 permissions:
