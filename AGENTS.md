@@ -18,10 +18,17 @@
 7. If a result looks too good, assume a bug first and test it (random-entry control, trade audit).
 
 ## 3. Files that matter now
-- daily_trend_paper.py (paper trader, runs by itself; paper_state.json, paper_trades.csv, paper_run.log), paper_status.py / show_status.bat (status)
+- daily_trend_paper.py (paper trader with 3 books: D55-LADDER, D55-TRAIL3, D55-C1DONCH20; paper_state.json, paper_trades.csv, paper_run.log), paper_status.py / show_status.bat (status)
+- donchian_backtest.py (full Binance portfolio backtester + sweep + stress tests for Donchian variants)
 - edge_test.py ... edge_test4.py, signal_csv_test.py (honest tests), config.py/regime.py/scoring.py/risk.py (v2 modules, not wired live)
 - master_bot.py and agents/ = old 1H system; no proven edge; do not trade real money with it.
 
 ## 4. Environment
 - Run Python with the project venv: .venv\Scripts\python.exe
 - PROXY_ENABLED=false when a system VPN is active.
+
+## 5. Paper Evaluation & Stop Criteria (Objective gates)
+- Minimum sample: Run for at least 60 closed trades or 3-4 months before evaluating or changing anything.
+- Review/Stop threshold: If after 60 trades expectancy is negative (mean R <= 0) or maximum drawdown exceeds 25%, stop and review.
+- No emotional tuning: Do not tweak filters or exits during drawdowns (10-15 consecutive losses are statistically normal at ~24% win rate).
+- Realism check: Periodically audit paper fills (slippage, fees, funding) against backtest assumptions.

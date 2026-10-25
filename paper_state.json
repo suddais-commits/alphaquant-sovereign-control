@@ -2,53 +2,18 @@
  "books": {
   "D55-LADDER": {
    "equity": 959.4038062850549,
-   "open": [
-    {
-     "book": "D55-LADDER",
-     "sym": "EGLD",
-     "side": -1,
-     "entry_time": "2026-10-25 00:00:00",
-     "entry": 3.3153415,
-     "stop": 3.866497299979151,
-     "cur": 3.866497299979151,
-     "dist": 0.551155799979151,
-     "risk_amt": 4.7970190314252745,
-     "state": 0,
-     "be": false,
-     "rem": 1.0,
-     "real": 0.0,
-     "best": 3.3153415,
-     "active": false,
-     "nbars": 0,
-     "last_time": null
-    }
-   ],
-   "last_bar": "2026-10-24 00:00:00"
+   "open": [],
+   "last_bar": "2026-10-23 00:00:00"
   },
   "D55-TRAIL3": {
    "equity": 959.4038062850549,
-   "open": [
-    {
-     "book": "D55-TRAIL3",
-     "sym": "EGLD",
-     "side": -1,
-     "entry_time": "2026-10-25 00:00:00",
-     "entry": 3.3153415,
-     "stop": 3.866497299979151,
-     "cur": 3.866497299979151,
-     "dist": 0.551155799979151,
-     "risk_amt": 4.7970190314252745,
-     "state": 0,
-     "be": false,
-     "rem": 1.0,
-     "real": 0.0,
-     "best": 3.3153415,
-     "active": false,
-     "nbars": 0,
-     "last_time": null
-    }
-   ],
-   "last_bar": "2026-10-24 00:00:00"
+   "open": [],
+   "last_bar": "2026-10-23 00:00:00"
+  },
+  "D55-C1DONCH20": {
+   "equity": 1000.0,
+   "open": [],
+   "last_bar": "2026-10-23 00:00:00"
   }
  }
 }
