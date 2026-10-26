@@ -19,11 +19,11 @@
      "real": 0.0,
      "best": 3.3153415,
      "active": false,
-     "nbars": 0,
-     "last_time": null
+     "nbars": 1,
+     "last_time": "2026-10-25 00:00:00"
     }
    ],
-   "last_bar": "2026-10-24 00:00:00"
+   "last_bar": "2026-10-25 00:00:00"
   },
   "D55-TRAIL3": {
    "equity": 959.4038062850549,
@@ -42,18 +42,18 @@
      "be": false,
      "rem": 1.0,
      "real": 0.0,
-     "best": 3.3153415,
+     "best": 3.193,
      "active": false,
-     "nbars": 0,
-     "last_time": null
+     "nbars": 1,
+     "last_time": "2026-10-25 00:00:00"
     }
    ],
-   "last_bar": "2026-10-24 00:00:00"
+   "last_bar": "2026-10-25 00:00:00"
   },
   "D55-C1DONCH20": {
    "equity": 1000.0,
    "open": [],
-   "last_bar": "2026-10-24 00:00:00"
+   "last_bar": "2026-10-25 00:00:00"
   }
  }
 }
