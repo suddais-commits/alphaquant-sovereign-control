@@ -1,7 +1,7 @@
 {
  "books": {
   "D55-LADDER": {
-   "equity": 959.4038062850549,
+   "equity": 954.4200230593913,
    "open": [
     {
      "book": "D55-LADDER",
@@ -19,8 +19,8 @@
      "real": 0.0,
      "best": 3.3153415,
      "active": false,
-     "nbars": 5,
-     "last_time": "2026-10-29 00:00:00"
+     "nbars": 6,
+     "last_time": "2026-10-30 00:00:00"
     },
     {
      "book": "D55-LADDER",
@@ -39,8 +39,8 @@
      "best": 698.1207650000001,
      "active": false,
      "exit_open": false,
-     "nbars": 0,
-     "last_time": null
+     "nbars": 1,
+     "last_time": "2026-10-30 00:00:00"
     },
     {
      "book": "D55-LADDER",
@@ -59,8 +59,8 @@
      "best": 1.2369812,
      "active": false,
      "exit_open": false,
-     "nbars": 0,
-     "last_time": null
+     "nbars": 1,
+     "last_time": "2026-10-30 00:00:00"
     },
     {
      "book": "D55-LADDER",
@@ -79,8 +79,8 @@
      "best": 0.06894551,
      "active": false,
      "exit_open": false,
-     "nbars": 0,
-     "last_time": null
+     "nbars": 1,
+     "last_time": "2026-10-30 00:00:00"
     },
     {
      "book": "D55-LADDER",
@@ -99,8 +99,8 @@
      "best": 0.15982005,
      "active": false,
      "exit_open": false,
-     "nbars": 0,
-     "last_time": null
+     "nbars": 1,
+     "last_time": "2026-10-30 00:00:00"
     },
     {
      "book": "D55-LADDER",
@@ -119,28 +119,8 @@
      "best": 0.0057691140000000005,
      "active": false,
      "exit_open": false,
-     "nbars": 0,
-     "last_time": null
-    },
-    {
-     "book": "D55-LADDER",
-     "sym": "TRX",
-     "side": 1,
-     "entry_time": "2026-10-30 00:00:00",
-     "entry": 0.35257619999999995,
-     "stop": 0.34095282435447793,
-     "cur": 0.34095282435447793,
-     "dist": 0.011623375645522016,
-     "risk_amt": 4.7970190314252745,
-     "state": 0,
-     "be": false,
-     "rem": 1.0,
-     "real": 0.0,
-     "best": 0.35257619999999995,
-     "active": false,
-     "exit_open": false,
-     "nbars": 0,
-     "last_time": null
+     "nbars": 1,
+     "last_time": "2026-10-30 00:00:00"
     },
     {
      "book": "D55-LADDER",
@@ -159,14 +139,34 @@
      "best": 95.60217500000002,
      "active": false,
      "exit_open": false,
+     "nbars": 1,
+     "last_time": "2026-10-30 00:00:00"
+    },
+    {
+     "book": "D55-LADDER",
+     "sym": "CRV",
+     "side": -1,
+     "entry_time": "2026-10-31 00:00:00",
+     "entry": 0.2892553,
+     "stop": 0.34478533777692905,
+     "cur": 0.34478533777692905,
+     "dist": 0.05553003777692905,
+     "risk_amt": 4.772100115296957,
+     "state": 0,
+     "be": false,
+     "rem": 1.0,
+     "real": 0.0,
+     "best": 0.2892553,
+     "active": false,
+     "exit_open": false,
      "nbars": 0,
      "last_time": null
     }
    ],
-   "last_bar": "2026-10-29 00:00:00"
+   "last_bar": "2026-10-30 00:00:00"
   },
   "D55-TRAIL3": {
-   "equity": 959.4038062850549,
+   "equity": 954.4200230593913,
    "open": [
     {
      "book": "D55-TRAIL3",
@@ -182,10 +182,10 @@
      "be": false,
      "rem": 1.0,
      "real": 0.0,
-     "best": 3.16,
+     "best": 3.041,
      "active": false,
-     "nbars": 5,
-     "last_time": "2026-10-29 00:00:00"
+     "nbars": 6,
+     "last_time": "2026-10-30 00:00:00"
     },
     {
      "book": "D55-TRAIL3",
@@ -201,11 +201,11 @@
      "be": false,
      "rem": 1.0,
      "real": 0.0,
-     "best": 698.1207650000001,
+     "best": 682.16,
      "active": false,
      "exit_open": false,
-     "nbars": 0,
-     "last_time": null
+     "nbars": 1,
+     "last_time": "2026-10-30 00:00:00"
     },
     {
      "book": "D55-TRAIL3",
@@ -221,11 +221,11 @@
      "be": false,
      "rem": 1.0,
      "real": 0.0,
-     "best": 1.2369812,
+     "best": 1.2002,
      "active": false,
      "exit_open": false,
-     "nbars": 0,
-     "last_time": null
+     "nbars": 1,
+     "last_time": "2026-10-30 00:00:00"
     },
     {
      "book": "D55-TRAIL3",
@@ -241,11 +241,11 @@
      "be": false,
      "rem": 1.0,
      "real": 0.0,
-     "best": 0.06894551,
+     "best": 0.06645,
      "active": false,
      "exit_open": false,
-     "nbars": 0,
-     "last_time": null
+     "nbars": 1,
+     "last_time": "2026-10-30 00:00:00"
     },
     {
      "book": "D55-TRAIL3",
@@ -261,11 +261,11 @@
      "be": false,
      "rem": 1.0,
      "real": 0.0,
-     "best": 0.15982005,
+     "best": 0.1523,
      "active": false,
      "exit_open": false,
-     "nbars": 0,
-     "last_time": null
+     "nbars": 1,
+     "last_time": "2026-10-30 00:00:00"
     },
     {
      "book": "D55-TRAIL3",
@@ -281,31 +281,11 @@
      "be": false,
      "rem": 1.0,
      "real": 0.0,
-     "best": 0.0057691140000000005,
+     "best": 0.005578,
      "active": false,
      "exit_open": false,
-     "nbars": 0,
-     "last_time": null
-    },
-    {
-     "book": "D55-TRAIL3",
-     "sym": "TRX",
-     "side": 1,
-     "entry_time": "2026-10-30 00:00:00",
-     "entry": 0.35257619999999995,
-     "stop": 0.34095282435447793,
-     "cur": 0.34095282435447793,
-     "dist": 0.011623375645522016,
-     "risk_amt": 4.7970190314252745,
-     "state": 0,
-     "be": false,
-     "rem": 1.0,
-     "real": 0.0,
-     "best": 0.35257619999999995,
-     "active": false,
-     "exit_open": false,
-     "nbars": 0,
-     "last_time": null
+     "nbars": 1,
+     "last_time": "2026-10-30 00:00:00"
     },
     {
      "book": "D55-TRAIL3",
@@ -321,40 +301,39 @@
      "be": false,
      "rem": 1.0,
      "real": 0.0,
-     "best": 95.60217500000002,
+     "best": 92.34,
      "active": false,
      "exit_open": false,
-     "nbars": 0,
-     "last_time": null
-    }
-   ],
-   "last_bar": "2026-10-29 00:00:00"
-  },
-  "D55-C1DONCH20": {
-   "equity": 1000.0,
-   "open": [
+     "nbars": 1,
+     "last_time": "2026-10-30 00:00:00"
+    },
     {
-     "book": "D55-C1DONCH20",
-     "sym": "TRX",
-     "side": 1,
-     "entry_time": "2026-10-30 00:00:00",
-     "entry": 0.35257619999999995,
-     "stop": 0.34095282435447793,
-     "cur": 0.34095282435447793,
-     "dist": 0.011623375645522016,
-     "risk_amt": 5.0,
+     "book": "D55-TRAIL3",
+     "sym": "CRV",
+     "side": -1,
+     "entry_time": "2026-10-31 00:00:00",
+     "entry": 0.2892553,
+     "stop": 0.34478533777692905,
+     "cur": 0.34478533777692905,
+     "dist": 0.05553003777692905,
+     "risk_amt": 4.772100115296957,
      "state": 0,
      "be": false,
      "rem": 1.0,
      "real": 0.0,
-     "best": 0.35257619999999995,
+     "best": 0.2892553,
      "active": false,
      "exit_open": false,
      "nbars": 0,
      "last_time": null
     }
    ],
-   "last_bar": "2026-10-29 00:00:00"
+   "last_bar": "2026-10-30 00:00:00"
+  },
+  "D55-C1DONCH20": {
+   "equity": 994.8053330693344,
+   "open": [],
+   "last_bar": "2026-10-30 00:00:00"
   }
  }
 }
