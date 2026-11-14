@@ -19,8 +19,8 @@
      "real": 0.0,
      "best": 3.3153415,
      "active": false,
-     "nbars": 19,
-     "last_time": "2026-11-12 00:00:00"
+     "nbars": 20,
+     "last_time": "2026-11-13 00:00:00"
     },
     {
      "book": "D55-LADDER",
@@ -39,8 +39,8 @@
      "best": 698.1207650000001,
      "active": false,
      "exit_open": false,
-     "nbars": 14,
-     "last_time": "2026-11-12 00:00:00"
+     "nbars": 15,
+     "last_time": "2026-11-13 00:00:00"
     },
     {
      "book": "D55-LADDER",
@@ -49,18 +49,18 @@
      "entry_time": "2026-10-30 00:00:00",
      "entry": 1.2369812,
      "stop": 1.3554961874026348,
-     "cur": 1.3554961874026348,
+     "cur": 1.2369812,
      "dist": 0.11851498740263477,
      "risk_amt": 4.7970190314252745,
-     "state": 0,
-     "be": false,
-     "rem": 1.0,
-     "real": 0.0,
+     "state": 1,
+     "be": true,
+     "rem": 0.7,
+     "real": 0.6,
      "best": 1.2369812,
      "active": false,
      "exit_open": false,
-     "nbars": 14,
-     "last_time": "2026-11-12 00:00:00"
+     "nbars": 15,
+     "last_time": "2026-11-13 00:00:00"
     },
     {
      "book": "D55-LADDER",
@@ -79,8 +79,8 @@
      "best": 0.06894551,
      "active": false,
      "exit_open": false,
-     "nbars": 14,
-     "last_time": "2026-11-12 00:00:00"
+     "nbars": 15,
+     "last_time": "2026-11-13 00:00:00"
     },
     {
      "book": "D55-LADDER",
@@ -99,8 +99,8 @@
      "best": 0.15982005,
      "active": false,
      "exit_open": false,
-     "nbars": 14,
-     "last_time": "2026-11-12 00:00:00"
+     "nbars": 15,
+     "last_time": "2026-11-13 00:00:00"
     },
     {
      "book": "D55-LADDER",
@@ -119,8 +119,8 @@
      "best": 0.0057691140000000005,
      "active": false,
      "exit_open": false,
-     "nbars": 14,
-     "last_time": "2026-11-12 00:00:00"
+     "nbars": 15,
+     "last_time": "2026-11-13 00:00:00"
     },
     {
      "book": "D55-LADDER",
@@ -129,18 +129,18 @@
      "entry_time": "2026-10-30 00:00:00",
      "entry": 95.60217500000002,
      "stop": 104.56949727363127,
-     "cur": 104.56949727363127,
+     "cur": 95.60217500000002,
      "dist": 8.967322273631254,
      "risk_amt": 4.7970190314252745,
-     "state": 0,
-     "be": false,
-     "rem": 1.0,
-     "real": 0.0,
+     "state": 1,
+     "be": true,
+     "rem": 0.7,
+     "real": 0.6,
      "best": 95.60217500000002,
      "active": false,
      "exit_open": false,
-     "nbars": 14,
-     "last_time": "2026-11-12 00:00:00"
+     "nbars": 15,
+     "last_time": "2026-11-13 00:00:00"
     },
     {
      "book": "D55-LADDER",
@@ -159,11 +159,11 @@
      "best": 0.2892553,
      "active": false,
      "exit_open": false,
-     "nbars": 13,
-     "last_time": "2026-11-12 00:00:00"
+     "nbars": 14,
+     "last_time": "2026-11-13 00:00:00"
     }
    ],
-   "last_bar": "2026-11-12 00:00:00"
+   "last_bar": "2026-11-13 00:00:00"
   },
   "D55-TRAIL3": {
    "equity": 954.4200230593913,
@@ -184,8 +184,8 @@
      "real": 0.0,
      "best": 2.762,
      "active": false,
-     "nbars": 19,
-     "last_time": "2026-11-12 00:00:00"
+     "nbars": 20,
+     "last_time": "2026-11-13 00:00:00"
     },
     {
      "book": "D55-TRAIL3",
@@ -201,11 +201,11 @@
      "be": false,
      "rem": 1.0,
      "real": 0.0,
-     "best": 650.01,
+     "best": 622.41,
      "active": false,
      "exit_open": false,
-     "nbars": 14,
-     "last_time": "2026-11-12 00:00:00"
+     "nbars": 15,
+     "last_time": "2026-11-13 00:00:00"
     },
     {
      "book": "D55-TRAIL3",
@@ -221,11 +221,11 @@
      "be": false,
      "rem": 1.0,
      "real": 0.0,
-     "best": 1.0164,
+     "best": 0.9975,
      "active": false,
      "exit_open": false,
-     "nbars": 14,
-     "last_time": "2026-11-12 00:00:00"
+     "nbars": 15,
+     "last_time": "2026-11-13 00:00:00"
     },
     {
      "book": "D55-TRAIL3",
@@ -241,11 +241,11 @@
      "be": false,
      "rem": 1.0,
      "real": 0.0,
-     "best": 0.0629,
+     "best": 0.06064,
      "active": false,
      "exit_open": false,
-     "nbars": 14,
-     "last_time": "2026-11-12 00:00:00"
+     "nbars": 15,
+     "last_time": "2026-11-13 00:00:00"
     },
     {
      "book": "D55-TRAIL3",
@@ -264,8 +264,8 @@
      "best": 0.1321,
      "active": false,
      "exit_open": false,
-     "nbars": 14,
-     "last_time": "2026-11-12 00:00:00"
+     "nbars": 15,
+     "last_time": "2026-11-13 00:00:00"
     },
     {
      "book": "D55-TRAIL3",
@@ -284,8 +284,8 @@
      "best": 0.0049,
      "active": false,
      "exit_open": false,
-     "nbars": 14,
-     "last_time": "2026-11-12 00:00:00"
+     "nbars": 15,
+     "last_time": "2026-11-13 00:00:00"
     },
     {
      "book": "D55-TRAIL3",
@@ -301,11 +301,11 @@
      "be": false,
      "rem": 1.0,
      "real": 0.0,
-     "best": 80.46,
+     "best": 77.19,
      "active": false,
      "exit_open": false,
-     "nbars": 14,
-     "last_time": "2026-11-12 00:00:00"
+     "nbars": 15,
+     "last_time": "2026-11-13 00:00:00"
     },
     {
      "book": "D55-TRAIL3",
@@ -321,14 +321,14 @@
      "be": false,
      "rem": 1.0,
      "real": 0.0,
-     "best": 0.2307,
+     "best": 0.2255,
      "active": false,
      "exit_open": false,
-     "nbars": 13,
-     "last_time": "2026-11-12 00:00:00"
+     "nbars": 14,
+     "last_time": "2026-11-13 00:00:00"
     }
    ],
-   "last_bar": "2026-11-12 00:00:00"
+   "last_bar": "2026-11-13 00:00:00"
   },
   "D55-C1DONCH20": {
    "equity": 994.8053330693344,
@@ -350,8 +350,8 @@
      "best": 0.07114440999999999,
      "active": false,
      "exit_open": false,
-     "nbars": 7,
-     "last_time": "2026-11-12 00:00:00"
+     "nbars": 8,
+     "last_time": "2026-11-13 00:00:00"
     },
     {
      "book": "D55-C1DONCH20",
@@ -370,8 +370,8 @@
      "best": 0.01115442,
      "active": false,
      "exit_open": false,
-     "nbars": 7,
-     "last_time": "2026-11-12 00:00:00"
+     "nbars": 8,
+     "last_time": "2026-11-13 00:00:00"
     },
     {
      "book": "D55-C1DONCH20",
@@ -390,8 +390,8 @@
      "best": 0.14332830000000002,
      "active": false,
      "exit_open": false,
-     "nbars": 7,
-     "last_time": "2026-11-12 00:00:00"
+     "nbars": 8,
+     "last_time": "2026-11-13 00:00:00"
     },
     {
      "book": "D55-C1DONCH20",
@@ -410,8 +410,8 @@
      "best": 0.15292350000000002,
      "active": false,
      "exit_open": false,
-     "nbars": 7,
-     "last_time": "2026-11-12 00:00:00"
+     "nbars": 8,
+     "last_time": "2026-11-13 00:00:00"
     },
     {
      "book": "D55-C1DONCH20",
@@ -430,8 +430,8 @@
      "best": 0.1405297,
      "active": false,
      "exit_open": false,
-     "nbars": 7,
-     "last_time": "2026-11-12 00:00:00"
+     "nbars": 8,
+     "last_time": "2026-11-13 00:00:00"
     },
     {
      "book": "D55-C1DONCH20",
@@ -450,8 +450,8 @@
      "best": 0.16261865000000003,
      "active": false,
      "exit_open": false,
-     "nbars": 7,
-     "last_time": "2026-11-12 00:00:00"
+     "nbars": 8,
+     "last_time": "2026-11-13 00:00:00"
     },
     {
      "book": "D55-C1DONCH20",
@@ -460,18 +460,18 @@
      "entry_time": "2026-11-07 00:00:00",
      "entry": 1.17851045,
      "stop": 1.2986546919381532,
-     "cur": 1.2986546919381532,
+     "cur": 1.17851045,
      "dist": 0.1201442419381531,
      "risk_amt": 4.974026665346672,
      "state": 0,
-     "be": false,
+     "be": true,
      "rem": 1.0,
      "real": 0.0,
      "best": 1.17851045,
      "active": false,
      "exit_open": false,
-     "nbars": 6,
-     "last_time": "2026-11-12 00:00:00"
+     "nbars": 7,
+     "last_time": "2026-11-13 00:00:00"
     },
     {
      "book": "D55-C1DONCH20",
@@ -490,11 +490,11 @@
      "best": 2126.39627,
      "active": false,
      "exit_open": false,
-     "nbars": 4,
-     "last_time": "2026-11-12 00:00:00"
+     "nbars": 5,
+     "last_time": "2026-11-13 00:00:00"
     }
    ],
-   "last_bar": "2026-11-12 00:00:00"
+   "last_bar": "2026-11-13 00:00:00"
   }
  }
 }
